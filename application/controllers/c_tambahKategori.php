@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class c_inputKategori extends CI_Controller {
+class c_tambahKategori extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -20,7 +20,7 @@ class c_inputKategori extends CI_Controller {
             $data['num_rows'] = $tb_kategori->num_rows();
         	$this->load->view('template/header');
             $this->load->view('template/sidebar');
-        	$this->load->view('v_inputKategori', $data);
+        	$this->load->view('v_tambahKategori', $data);
         	$this->load->view('template/footer');
             
         }
@@ -39,11 +39,11 @@ class c_inputKategori extends CI_Controller {
         redirect('/c_Kategori');
     }
 
-    public function v_inputKategori()
+    public function v_tambahKategori()
     {
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('v_inputKategori');
+        $this->load->view('v_tambahKategori');
         $this->load->view('template/footer');
     }
     
@@ -53,7 +53,7 @@ class c_inputKategori extends CI_Controller {
         $data['update'] = $this->db->get('tb_kategori')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('v_inputKategori', $data);
+        $this->load->view('v_tambahKategori', $data);
         $this->load->view('template/footer');
     }
     /*
