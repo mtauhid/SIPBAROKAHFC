@@ -51,7 +51,7 @@
                         <!-- Form -->
                         <div class="row">
                             <div class="col-12">
-                                <form action="<?php echo site_url('authentication/auth/login'); ?>" method="post" class="form-horizontal m-t-20" id="loginform"  >
+                                <form action="<?php echo site_url('authentication/auth/login'); ?>" method="post"  class="form-validation form-horizontal m-t-20" id="loginform"  >
                                     <?php
                                     //menampilkan error menggunakan alert javascript
                                       if(isset($error)){
@@ -72,26 +72,9 @@
                                         </div>
                                         <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-md-12">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">Remember me</label>
-                                                <a href="javascript:void(0)" id="to-recover" class="text-dark float-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="form-group text-center">
                                         <div class="col-xs-12 p-b-20">
-                                            <button class="btn btn-block btn-lg btn-info" type="submit" name="submit" >Log In</button>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                            <div class="social">
-                                                <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="" data-original-title="Login with Facebook"> <i aria-hidden="true" class="fab fa-facebook-f"></i> </a>
-                                                <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="" data-original-title="Login with Google"> <i aria-hidden="true" class="fab fa-google"></i> </a>
-                                            </div>
+                                            <button class="btn btn-block btn-lg btn-info" type="submit" >Log In</button>
                                         </div>
                                     </div>
                                     <div class="form-group m-b-0 m-t-10">

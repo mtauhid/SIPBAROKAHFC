@@ -6,6 +6,8 @@
                         <ul id="sidebarnav">
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Dashboard" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
 
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="c_pesan" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Pesan</span></a></li>
+
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="c_transaksi" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Transaksi</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cards-variant"></i><span class="hide-menu">Produk</span></a>
@@ -15,7 +17,7 @@
                                     <li class="sidebar-item"><a href="eco-products-detail.html" class="sidebar-link"><i class="mdi mdi-camera-burst"></i> <span class="hide-menu">Product Details</span></a></li>
                                     <li class="sidebar-item"><a href="eco-products-orders.html" class="sidebar-link"><i class="mdi mdi-chart-pie"></i> <span class="hide-menu">Product Orders</span></a></li>
                                     <li class="sidebar-item"><a href="eco-products-checkout.html" class="sidebar-link"><i class="mdi mdi-clipboard-check"></i> <span class="hide-menu">Products Checkout</span></a></li>
-                                    <li class="sidebar-item"><a href="eco-products-cart.html" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Tambah Produk</span></a></li>
+                                    <li class="sidebar-item"><a href="c_tambahProduk" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Tambah Produk</span></a></li>
                                     <li class="sidebar-item"><a href="c_Kategori" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Kategori Produk</span></a></li>
                                 </ul>
                             </li>
