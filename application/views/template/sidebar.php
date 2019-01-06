@@ -19,6 +19,7 @@
                                     <li class="sidebar-item"><a href="eco-products-checkout.html" class="sidebar-link"><i class="mdi mdi-clipboard-check"></i> <span class="hide-menu">Products Checkout</span></a></li>
                                     <li class="sidebar-item"><a href="c_tambahProduk" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Tambah Produk</span></a></li>
                                     <li class="sidebar-item"><a href="c_Kategori" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Kategori Produk</span></a></li>
+									<li class="sidebar-item"><a href="c_inputKategori" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Input Kategori</span></a></li>
                                 </ul>
                             </li>
 
