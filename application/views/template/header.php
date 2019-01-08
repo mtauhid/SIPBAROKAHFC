@@ -13,11 +13,11 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
         <title>SI BAROKAH FRIED CHICKEN</title>
         <!-- Custom CSS -->
-        <link href="assets/libs/morris.js/morris.css" rel="stylesheet">
-        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/libs/morris.js/morris.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')?>" rel="stylesheet">
         <!-- Custom CSS -->
-       <link href="assets/css/theme.css" rel="stylesheet">
-        <link href="assets/css/responsive.css" rel="stylesheet">
+       <link href="<?php echo base_url('assets/css/theme.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/responsive.css')?>" rel="stylesheet">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -56,17 +56,17 @@
                             <b class="logo-icon">
                                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                                 <!-- Dark Logo icon -->
-                                <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                                <img src="<?php echo base_url('assets/images/logo-icon.png')?>" alt="homepage" class="dark-logo" />
                                 <!-- Light Logo icon -->
-                                <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                                <img src="<?php echo base_url('assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
                             <span class="logo-text">
                                 <!-- dark Logo text -->
-                                <img src="assets/images/logo-barokah.png" alt="homepage" class="dark-logo" />
+                                <img src="<?php echo base_url('assets/images/logo-barokah.png')?>" alt="homepage" class="dark-logo" />
                                 <!-- Light Logo text -->    
-                                <img src="assets/images/logo-barokah-1.png" class="light-logo" alt="homepage" />
+                                <img src="<?php echo base_url('assets/images/logo-barokah-1.png')?>" class="light-logo" alt="homepage" />
                             </span>
                         </a>
                         <!-- ============================================================== -->
@@ -197,12 +197,12 @@
                             <!-- ============================================================== -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"><b>Steave Jobs <i class="fa fa-angle-down"></i></b>
+                                    <img src="<?php echo base_url('assets/images/users/1.jpg')?>" alt="user" class="rounded-circle" width="31"><b>Steave Jobs <i class="fa fa-angle-down"></i></b>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                     <span class="with-arrow"><span class="bg-primary"></span></span>
                                     <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
-                                        <div class=""><img src="assets/images/users/1.jpg" alt="user" class="img-circle" width="60"></div>
+                                        <div class=""><img src="<?php echo base_url('assets/images/users/1.jpg')?>" alt="user" class="img-circle" width="60"></div>
                                         <div class="m-l-10">
                                             <h4 class="m-b-0">Steave Jobs</h4>
                                             <p class=" m-b-0">varun@gmail.com</p>
