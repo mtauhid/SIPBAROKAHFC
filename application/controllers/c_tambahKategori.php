@@ -29,6 +29,7 @@ class c_tambahKategori extends CI_Controller {
     {
 		$input['kd_kategori'] = $this->input->post('kode');
         $input['nama_kategori'] = $this->input->post('kategori');
+		
         $updateKD = $this->input->post('updateKD');
         if (!empty($updateKD)) {
             $this->db->where('kd_kategori', $updateKD);
@@ -36,7 +37,7 @@ class c_tambahKategori extends CI_Controller {
         } else {
             $this->db->insert('tb_kategori', $input);
         }
-        redirect('/c_Kategori');
+        redirect('c_Kategori');
     }
 
     public function v_tambahKategori()

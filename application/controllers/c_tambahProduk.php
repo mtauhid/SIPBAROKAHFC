@@ -30,10 +30,12 @@ class c_tambahProduk extends CI_Controller {
 
         public function save()
     {
+		$input['kd_produk'] = $this->input->post('kode');
         $input['nm_produk'] = $this->input->post('nmproduk');
         $input['kd_kategori'] = $this->input->post('kategoriproduk');
         $input['harga'] = $this->input->post('harga');
         $input['keterangan'] = $this->input->post('keterangan');
+		
         $updateKD = $this->input->post('updateKD');
         if (!empty($updateKD)) {
             $this->db->where('kd_produk', $updateKD);
