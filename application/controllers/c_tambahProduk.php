@@ -41,7 +41,7 @@ class c_tambahProduk extends CI_Controller {
             $this->db->where('kd_produk', $updateKD);
             $this->db->update('tb_produk', $input);
         } else {
-            $this->db->insert('tb_produk', $input);
+            $this->db->insert('tb_produkdibeli', $input);
         }
         redirect('/c_Produk');
     }

@@ -130,11 +130,15 @@ class Model_app extends CI_Model{
     }
 
     function getProduk(){
-        return $this->db->query ("SELECT * from tb_produk where stok > 0")->result();
+        return $this->db->query ("SELECT * from tb_produk")->result();
     }
 
     function getAllDataPenjualan(){
         return $this->db->query("SELECT * FROM tb_transaksi")->result();
+    }
+
+    function getDataCart(){
+        return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk")->result();
     }
 
     function getDataPenjualan($id){

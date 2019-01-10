@@ -6,7 +6,8 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li class="breadcrumb-item active">Library</li>
+                                            <li class="breadcrumb-item"><a href="#">Transaksi</a></li>
+                                            <li class="breadcrumb-item" active>Tambah barang yang dibeli</a></li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -22,97 +23,100 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <input type="text" class="form-control" id="nametext1" value="<?php echo $kd_trans; ?>" disabled style="width: 100px;">
+                                    <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" disabled style="width: 100px;">
+
                                     <h5 class="card-title"></h5>
+                                    <div class="table-responsive">
+                                        <form method="post" action="<?php echo site_url('/c_Transaksi/tambah_ke_cart') ?>">
+                                            <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="100%">
+                                                        <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" style="width: 100px;" hidden >
+                                                        <select class="form-control" name="kd_produk" id="exampleFormControlSelect1">
+                                                            <option selected disabled>PILIH ITEM PRODUK</option>
+                                                            <?php
+                                                            if(isset($data_produk)){
+                                                                foreach($data_produk as $row){
+                                                                    ?>
+                                                                    <option value="<?php echo $row->kd_produk?>"><?php echo $row->nm_produk?></option>
+                                                                <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                                    <td width="1">
+                                                        <input type="text" class="form-control" name="qty" value="" style="width: 80px;" placeholder="JUMLAH">
+                                                    </td>
+                                                    <td width="1">
+                                                        <button type="submit" class="btn waves-effect waves-light btn-info">Tambah Barang</button>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </form>
+                                        
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>No</th>
-                                                    <th>Kode Barang</th>
-                                                    <th>Nama Barang</th>
-                                                    <th>Harga</th>
-                                                    <th width="1%"><a class="btn btn-sm btn-primary" style="width: 120px" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Tambah Barang</a></th>
+                                                    <th width="1%">No</th>
+                                                    <th width="13%">Kode Produk</th>
+                                                    <th>Nama Produk</th>
+                                                    <th width="1%">Qty</th>
+                                                    <th width="1%">Harga</th>
+                                                    <th width="1%" colspan="2"></th>
                                                 </tr>
                                             </thead>
+                                            
                                             <tbody>
+                                                <?php
+                                                $no = 1;
+                                                if(isset($data_cart)){
+                                                    foreach($data_cart as $row){
+                                                ?>
                                                 <tr>
-                                                    <td><img src="assets/images/gallery/chair.jpg" alt="iMac" width="80"></td>
-                                                    <td>Rounded Chair</td>
-                                                    <td>20</td>
-                                                    <td class="font-500">$153</td>
-                                                    <td width="1%"><a class="btn btn-xs btn-danger" style="width: 120px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Tambah Data</a></td>
+                                                    <td style="text-align: center;"><?php echo $no++;?></td>
+                                                    <td style="text-align: center;"><?php echo $row->kd_produk ?></td>
+                                                    <td><?php echo $row->nm_produk ?></td>
+                                                    <td style="text-align: center;"><?php echo $row->qty ?></td>
+                                                    <td style="text-align: center;"></td>
+                                                    <td width="1%">
+                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-info" style="width: 50px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Detail</a>
+                                                    </td>
+                                                    <td width="1%">
+                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 50px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Hapus</a>
+                                                    </td>
                                                 </tr>
+                                                <?php
+                                                    }
+                                                }
+                                                ?>
                                                 <tr>
-                                                    <td colspan="4" class="font-500" align="right">Total Bayar</td>
+                                                    <td colspan="6" class="font-500" align="right">Total Bayar</td>
                                                     <td class="font-500">$153</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="1">
+                                                        <button type="submit" class="btn waves-effect btn-warning">Batal</button>
+                                                    </td>
+                                                    <td width="">
+                                                        
+                                                    </td>
+                                                    <td width="1">
+                                                        <button type="button" type="submit" class="btn waves-effect waves-light btn-success">Selesai</button>
+                                                        
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <hr>
-                                    <h5 class="card-title">Choose payment Option</h5>
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="presentation" class="nav-item">
-                                            <a href="#iprofile" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">
-                                                <span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs"> Debit Card</span>
-                                            </a>
-                                        </li>
-                                        <li role="presentation" class="nav-item">
-                                            <a href="#ihome" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">
-                                                <span class="visible-xs"><i class="ti-user"></i></span> 
-                                                <span class="hidden-xs">Paypal</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane" id="ihome">
-                                            <br/> You can pay your money through paypal, for more info <a href="#">click here</a>
-                                            <br>
-                                            <br>
-                                            <button class="btn btn-info"><i class="fab fa-cc-paypal"></i> Pay with Paypal</button>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane active" id="iprofile">
-                                            <div class="row">
-                                                <div class="col-md-7">
-                                                    <form>
-                                                        <div class="form-group input-group m-t-40">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><i class="fab fa-cc-visa"></i></span>
-                                                            </div>
-                                                            <input type="text" class="form-control" placeholder="Card Number" aria-label="Amount (to the nearest dollar)">
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-7 col-md-7">
-                                                                <div class="form-group">
-                                                                    <label>EXPIRATION DATE</label>
-                                                                    <input type="text" class="form-control" name="Expiry" placeholder="MM / YY" required=""> </div>
-                                                            </div>
-                                                            <div class="col-xs-5 col-md-5 pull-right">
-                                                                <div class="form-group">
-                                                                    <label>CV CODE</label>
-                                                                    <input type="text" class="form-control" name="CVC" placeholder="CVC" required=""> </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>NAME OF CARD</label>
-                                                                    <input type="text" class="form-control" name="nameCard" placeholder="NAME AND SURNAME"> </div>
-                                                            </div>
-                                                        </div>
-                                                        <button class="btn btn-info">Make Payment</button>
-                                                    </form>
-                                                </div>
-                                                <div class="col-md-4 ml-auto">
-                                                    <h4 class="card-title m-t-30">General Info</h4>
-                                                    <h2><i class="fab fa-cc-visa text-info"></i> <i class="fab fa-cc-mastercard text-danger"></i> <i class="fab fa-cc-discover text-success"></i> <i class="fab fa-cc-amex text-warning"></i></h2>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
