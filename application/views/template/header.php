@@ -51,14 +51,14 @@
                         <!-- ============================================================== -->
                         <!-- Logo -->
                         <!-- ============================================================== -->
-                        <a class="navbar-brand" href=".">
+                        <a class="navbar-brand" href="<?php echo site_url('.')?>"">
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                                 <!-- Dark Logo icon -->
-                                <img src="<?php echo base_url('assets/images/logo-icon.png')?>" alt="homepage" class="dark-logo" />
+                                <img src="<?php echo base_url('assets/images/barokahchicken1.png')?>" alt="homepage" class="dark-logo" />
                                 <!-- Light Logo icon -->
-                                <img src="<?php echo base_url('assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
+                                <img src="<?php echo base_url('assets/images/barokahchicken1.png')?>" alt="homepage" class="light-logo" />
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
@@ -214,7 +214,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="authentication-login1.html"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    <a class="dropdown-item" href="<?php echo site_url('authentication/login/logout')?>"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                                 </div>
                             </li>
                             <!-- ============================================================== -->

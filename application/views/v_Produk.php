@@ -26,6 +26,17 @@
                                     <h4 class="card-title">Daftar Produk</h4>
                                     <!--<h6 class="card-subtitle">Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</h6>-->
                                 </div>
+                                <table class="table" >
+                                            <tbody>
+                                                <tr>
+                                                    
+                                                    <td width="1">
+                                                        <a class="btn btn-primary" href="c_tambahProduk" role="button">Tambah Produk</a>
+                                                    </td>
+                                                    <td width="100%"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>

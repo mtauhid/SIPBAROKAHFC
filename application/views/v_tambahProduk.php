@@ -38,7 +38,7 @@
                                                 <textarea class="form-control" name="keterangan" rows="5"></textarea>
                                             </div>
                                             <button type="submit" class="btn btn-success m-r-10">Simpan</button>
-                                            <button type="submit" class="btn btn-dark">Batal</button>
+                                            <a class="btn btn-primary" href="c_Produk" role="button">Batal</a>
                                         </form>
                                     </div>
                                 </div>

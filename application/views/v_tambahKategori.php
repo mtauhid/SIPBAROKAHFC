@@ -31,7 +31,7 @@
 													echo $update_flag; 
 													} ?>
                                             <button type="submit" class="btn btn-success m-r-10">Simpan</button>
-                                            <button type="submit" class="btn btn-dark">Batal</button>
+                                            <a class="btn btn-primary" href="c_Kategori" role="button">Batal</a>
                                         </form>
                                     </div>
                                 </div>

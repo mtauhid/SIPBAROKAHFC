@@ -167,7 +167,7 @@ class Model_app extends CI_Model{
     function login($username, $password) {
         //create query to connect user login database
         $this->db->select('*');
-        $this->db->from('tbl_pegawai');
+        $this->db->from('tb_user');
         $this->db->where('username', $username);
         $this->db->where('password', MD5($password));
         $this->db->limit(1);

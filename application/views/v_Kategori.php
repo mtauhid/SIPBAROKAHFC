@@ -26,18 +26,30 @@
                                     <h4 class="card-title">Daftar Kategori</h4>
                                     <!--<h6 class="card-subtitle">Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</h6>-->
                                 </div>
+                                <table class="table" >
+                                            <tbody>
+                                                <tr>
+                                                    
+                                                    <td width="1">
+                                                        <a class="btn btn-primary" href="c_tambahKategori" role="button">Tambah Kategori</a>
+                                                    </td>
+                                                    <td width="100%"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama Kategori</th>
+                                                <th width="1"></th>
                                             </tr>
                                         </thead>
                                         <?php foreach ($kategori as $r) {
                                             echo '<tr>';
                                             echo '<td>'.$r['kd_kategori'].'</td><td>'.$r['nama_kategori'].'</td>';
-                                            echo '<td><a href="'.site_url('/c_tambahKategori/v_updateKategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Ubah</a></td>';
+                                            echo '<td><a class="btn btn-primary" href="'.site_url('/c_tambahKategori/v_updateKategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Ubah</a></td>';
                                             echo '</tr>';
                                         }
                                         ?>
