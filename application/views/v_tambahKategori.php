@@ -19,8 +19,12 @@
                                     <div class="col-sm-12 col-xs-12">
                                         <form method="post" action="<?php echo site_url('/c_tambahKategori/save') ?>">
 											<div class="form-group">
+                                                <label for="">Kode</label>
+                                                <input type="text" name="kode" class="form-control" id="kode" placeholder="Kode" required>
+                                            </div>
+											<div class="form-group">
                                                 <label for="">Nama Kategori</label>
-                                                <input type="text" name="kategori" class="form-control" id="" placeholder="Kategori" required>
+                                                <input type="text" name="kategori" class="form-control" id="kategori" placeholder="Kategori" required>
                                             </div>
                                             
 											<?php if (isset($update_flag)) { 
