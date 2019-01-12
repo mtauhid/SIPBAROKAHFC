@@ -41,7 +41,7 @@
             $input['kd_trans'] = $this->input->post('kd_trans');
             $input['qty'] = $this->input->post('qty');
         
-            $this->db->insert('tb_cart', $input);
+            $this->db->insert('tb_produkdibeli', $input);
             redirect('c_transaksi/tambah_transaksi');
         }
 

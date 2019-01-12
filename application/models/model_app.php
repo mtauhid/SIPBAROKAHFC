@@ -134,11 +134,11 @@ class Model_app extends CI_Model{
     }
 
     function getAllDataPenjualan(){
-        return $this->db->query("SELECT * FROM tb_transaksi")->result();
+        return $this->db->query("SELECT * FROM tb_transaksi a, tb_produkdibeli b WHERE a.kd_trans=b.kd_trans")->result();
     }
 
     function getDataCart(){
-        return $this->db->query("SELECT * FROM tb_cart a, tb_produk b WHERE a.kd_produk=b.kd_produk")->result();
+        return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
     }
 
     function getDataPenjualan($id){

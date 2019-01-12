@@ -34,37 +34,43 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">No</th>
-                                                <th scope="col">Kode Transaksi</th>
-                                                <th scope="col">Jumlah Barang</th>
-                                                <th scope="col">Total Bayar</th>
-                                                <th colspan="2"></th>
-                                            </tr>
-                                        </thead>
-                                        <?php
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <caption>List of transaction</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th style="text-align: center;" width="1">No</th>
+                                                    <th style="text-align: center;">Kode Transaksi</th>
+                                                    <th>Nama Pelanggan</th>
+                                                    <th>Total Harga</th>
+                                                    <th scope="col">Jumlah yang dibeli</th>
+                                                    <th width="1" style="text-align: center;">Bayar</th>
+                                                </tr>
+                                            </thead>
+                                            <?php
                                         $no = 1;
                                         if(isset($data_penjualan)){
                                             foreach($data_penjualan as $row){
                                         ?>
                                         <tbody>
                                             <tr>
-                                                <th scope="row"><?php echo $no++ ?></th>
-                                                <td><?php echo $row->kd_trans ?></td>
-                                                <td><?php echo $row->total_bayar ?></td>
-                                                <td><?php echo $row->total_bayar ?></td>
+                                                <th style="text-align: center;"><?php echo $no++ ?></th>
+                                                <td style="text-align: center;"><?php echo $row->kd_trans ?></td>
+                                                <td><?php echo $row->nm_pelanggan ?></td>
+                                                <td>Rp. <?php echo $row->total_bayar ?></td>
                                                 <td>@mdo</td>
-                                                <td>df</td>
+                                                <td style="text-align: center;">
+                                                    <button type="button" class="btn waves-effect waves-light btn-outline-info">Detail</button>
+                                                </td>
                                             </tr>
                                         </tbody>
                                         <?php
                                             }
                                         }
                                         ?>
-                                    </table>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -66,7 +66,7 @@
                                                     <th>Nama Produk</th>
                                                     <th width="1%">Qty</th>
                                                     <th width="1%">Harga</th>
-                                                    <th width="1%" colspan="2"></th>
+                                                    <th width="110px" style="tex">Hapus item</th>
                                                 </tr>
                                             </thead>
                                             
@@ -82,11 +82,8 @@
                                                     <td><?php echo $row->nm_produk ?></td>
                                                     <td style="text-align: center;"><?php echo $row->qty ?></td>
                                                     <td style="text-align: center;"></td>
-                                                    <td width="1%">
-                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-info" style="width: 50px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Detail</a>
-                                                    </td>
-                                                    <td width="1%">
-                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 50px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Hapus</a>
+                                                    <td align="center">
+                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 100px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Hapus</a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -94,7 +91,7 @@
                                                 }
                                                 ?>
                                                 <tr>
-                                                    <td colspan="6" class="font-500" align="right">Total Bayar</td>
+                                                    <td colspan="5" class="font-500" align="right">Total Bayar</td>
                                                     <td class="font-500">$153</td>
                                                 </tr>
                                             </tbody>
