@@ -129,6 +129,7 @@ class Model_app extends CI_Model{
         return $this->db->query($q);
     }
 
+
     function getProduk(){
         return $this->db->query ("SELECT * from tb_produk")->result();
     }
@@ -139,6 +140,10 @@ class Model_app extends CI_Model{
 
     function getDataCart(){
         return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
+    }
+
+    function getTotalHarga(){
+        return $this->db->query ("SELECT SUM(a.harga) FROM tb_produk a, tb_produkdibeli b WHERE a.kd_produk=b.kd_produk")->result();
     }
 
     function getDataPenjualan($id){

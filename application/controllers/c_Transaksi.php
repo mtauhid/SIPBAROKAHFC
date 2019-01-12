@@ -27,6 +27,7 @@
         $data=array(
             'kd_trans'=>$this->model_app->getKodeTransaksi(),
             'data_cart'=>$this->model_app->getDataCart(),
+            'total_harga'=>$this->model_app->getTotalHarga(),
             'data_produk'=>$this->model_app->getProduk()
         );
             $this->load->view('template/header');
@@ -47,10 +48,21 @@
 
         public function selesai_pesan(){
             $input['kd_trans'] = $this->input->post('kd_trans');
+            $input['nm_pelanggan'] = $this->input->post('nm_pelanggan');
             $input['keterangan'] = $this->input->post('keterangan');
         
             $this->db->insert('tb_transaksi', $input);
+
+            $update['fix'] = $this->input->post('fix');
+            $input['kd_trans'] = $this->input->post('kd_trans');
+            $this->model_app->updateData("tb_produkdibeli",$update,$key);
             redirect('c_transaksi');
         }
+
+        function hapus_produkdibeli(){
+        $id['id_produkdibeli'] = $this->uri->segment(3);
+        $this->model_app->deleteData('tb_produkdibeli',$id);
+        redirect("c_transaksi/tambah_transaksi");
+    }
     }
 ?>

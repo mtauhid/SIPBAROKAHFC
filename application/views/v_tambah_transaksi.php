@@ -83,7 +83,7 @@
                                                     <td style="text-align: center;"><?php echo $row->qty ?></td>
                                                     <td style="text-align: center;"></td>
                                                     <td align="center">
-                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 100px;" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button">Hapus</a>
+                                                        <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 100px;" href="<?php echo site_url('c_Transaksi/hapus_produkdibeli/'.$row->id_produkdibeli);?>" role="button">Hapus</a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -91,8 +91,13 @@
                                                 }
                                                 ?>
                                                 <tr>
+                                                    <?php
+                                                        foreach($total_harga as $total){
+                                                            $tot = $total;
+                                                    ?>
                                                     <td colspan="5" class="font-500" align="right">Total Bayar</td>
-                                                    <td class="font-500">$153</td>
+                                                    <td class="font-500"><?php echo $total->tot?> ></td>
+                                                <?php } ?>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -100,10 +105,17 @@
                                             <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
-                                                    <td colspan="3">
+                                                    <td>
+                                                        <label>Nama Pelanggan</label>
+                                                        <input type="text" class="form-control" id="nametext1" name="nm_pelanggan" style="width: 200px;">
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <label>Keterangan Pemesanan</label>
                                                         <textarea name="keterangan" placeholder="Tambahkan keterangan" style="width: 100%" class="form-control" rows="2"></textarea>
 
                                                         <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" style="width: 100px;" hidden>
+
+                                                        <input type="text" class="form-control" id="nametext1" name="fix" value="1" style="width: 100px;" hidden>
                                                     </td>
                                                 </tr>
                                                 <tr>
