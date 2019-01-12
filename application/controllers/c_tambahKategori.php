@@ -61,24 +61,24 @@ class c_tambahKategori extends CI_Controller {
         $this->load->view('v_tambahKategori', $data);
         $this->load->view('template/footer');
     }
-    /*
-    public function v_deleteinputdosen($id)
+    
+    public function v_deletekategori($kd)
     {
-        $this->db->where('nip', $id);
-        $data['v_deleteinputdosen'] = $this->db->get('tb_dosen')->row_array();
+        $this->db->where('kd_kategori', $kd);
+        $data['delete'] = $this->db->get('tb_kategori')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('v_deleteinputdosen', $data);
+        $this->load->view('v_deletekategori', $data);
         $this->load->view('template/footer');
     }
 
     public function real_delete()
     {
-        $id = $this->input->post('nip');
-        $this->db->where('nip', $id);
-        $this->db->delete('tb_dosen');
-        redirect('/c_inputdosen/');
+        $id = $this->input->post('kd_kategori');
+        $this->db->where('kd_kategori', $kd);
+        $this->db->delete('tb_kategori');
+        redirect('/c_Kategori/');
     }
-    */
+    
     }
 ?>

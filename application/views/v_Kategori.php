@@ -50,6 +50,7 @@
                                             echo '<tr>';
                                             echo '<td>'.$r['kd_kategori'].'</td><td>'.$r['nama_kategori'].'</td>';
                                             echo '<td><a class="btn btn-primary" href="'.site_url('/c_tambahKategori/v_updateKategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Ubah</a></td>';
+											echo '<td><a class="btn btn-primary" href="'.site_url('/c_tambahKategori/v_deletekategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Hapus</a></td>';
                                             echo '</tr>';
                                         }
                                         ?>
