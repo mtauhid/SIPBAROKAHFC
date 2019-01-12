@@ -5,7 +5,7 @@
             if($this->session->userdata('login_status') != TRUE ){
             $this->session->set_flashdata('notif','LOGIN GAGAL USERNAME ATAU PASSWORD ANDA SALAH !');
             redirect('authentication/login');
-        };
+            };
 			$this->load->helper('url');
 
 		}

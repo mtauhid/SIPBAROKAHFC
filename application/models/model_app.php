@@ -138,7 +138,7 @@ class Model_app extends CI_Model{
     }
 
     function getDataCart(){
-        return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk")->result();
+        return $this->db->query("SELECT * FROM tb_cart a, tb_produk b WHERE a.kd_produk=b.kd_produk")->result();
     }
 
     function getDataPenjualan($id){

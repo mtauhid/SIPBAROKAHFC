@@ -23,7 +23,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" disabled style="width: 100px;">
+                                    <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans ?>" readonly style="width: 100px;">
 
                                     <h5 class="card-title"></h5>
                                     <div class="table-responsive">
@@ -99,21 +99,32 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <table class="table table-bordered">
+                                        <form method="post" action="<?php echo site_url('/c_Transaksi/selesai_pesan') ?>">
+                                            <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
+                                                    <td colspan="3">
+                                                        <textarea name="keterangan" placeholder="Tambahkan keterangan" style="width: 100%" class="form-control" rows="2"></textarea>
+
+                                                        <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" style="width: 100px;" hidden>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <td width="1">
-                                                        <button type="submit" class="btn waves-effect btn-warning">Batal</button>
+                                                        <button type="button" class="btn waves-effect btn-warning">Batal</button>
                                                     </td>
                                                     <td width="">
                                                         
                                                     </td>
                                                     <td width="1">
-                                                        <button type="button" type="submit" class="btn waves-effect waves-light btn-success">Selesai</button>
+                                                        
+                                                        <button type="submit" class="btn waves-effect waves-light btn-success">Selesai</button>
                                                         
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        </form>
+                                        
                                     </div>
 
 

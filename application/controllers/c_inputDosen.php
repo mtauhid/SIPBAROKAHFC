@@ -3,6 +3,10 @@
 class c_inputdosen extends CI_Controller {
 
     public function __construct() {
+        if($this->session->userdata('login_status') != TRUE ){
+            $this->session->set_flashdata('notif','LOGIN GAGAL USERNAME ATAU PASSWORD ANDA SALAH !');
+            redirect('authentication/login');
+            };
         parent::__construct();
         $this->load->database();
     }
