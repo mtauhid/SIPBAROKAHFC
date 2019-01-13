@@ -135,7 +135,15 @@ class Model_app extends CI_Model{
     }
 
     function getAllDataPenjualan(){
-        return $this->db->query("SELECT * FROM tb_transaksi a, tb_produkdibeli b WHERE a.kd_trans=b.kd_trans")->result();
+        return $this->db->query("SELECT
+            a.kd_trans,
+            a.tgl_trans,
+            a.total_bayar,
+            a.nm_pelanggan,
+            (select count(kd_trans) as jum from tb_produkdibeli where kd_trans=a.kd_trans) as jumlah
+        FROM tb_transaksi a
+        ORDER BY a.kd_trans DESC
+        ")->result();
     }
 
     function getDataCart(){

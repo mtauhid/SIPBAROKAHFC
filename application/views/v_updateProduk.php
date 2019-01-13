@@ -6,11 +6,10 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-12 col-xs-12">
-                                        <?php foreach($tb_produk as $u){ ?>
                                         <form method="post" action="<?php echo base_url('/c_updateProduk/update') ?>">
                                             <div class="form-group">
                                                 <label for="">Nama Produk</label>
-                                                <input type="text" name="nmproduk" class="form-control" id="" value="<?php echo ->nm_produk ?>">
+                                                <input type="text" name="nmproduk" class="form-control" id="" value="">
                                             </div>
                                             <div class="form-group">
                                                 <label>Kategori</label>
@@ -31,7 +30,6 @@
                                             <button type="submit" class="btn btn-success m-r-10">Simpan</button>
                                             <button type="submit" class="btn btn-dark">Batal</button>
                                         </form>
-                                    <?php } ?>
                                     </div>
                                 </div>
                             </div>

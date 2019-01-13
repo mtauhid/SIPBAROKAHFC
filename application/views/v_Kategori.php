@@ -43,7 +43,7 @@
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama Kategori</th>
-                                                <th width="1" colspan="2"></th>
+                                                <th width="1" colspan="2" style="text-align: center;">Action</th>
                                             </tr>
                                         </thead>
                                         <?php

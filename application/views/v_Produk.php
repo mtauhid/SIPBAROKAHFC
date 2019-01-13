@@ -28,11 +28,11 @@
                                             <caption>List of Produk</caption>
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">#</th>
+                                                    <th scope="col">Kode Produk</th>
                                                     <th scope="col">Nama Produk</th>
                                                     <th scope="col">Kategori</th>
                                                     <th scope="col">Harga</th>
-                                                    <th colspan="2" width="1"></th>
+                                                    <th colspan="2" width="1" style="text-align: center;">Action</th>
                                                 </tr>
                                             </thead>
                                             <?php
@@ -50,7 +50,7 @@
                                                         <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Ubah</a>
                                                     </td>
                                                     <td width="1">
-                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_deleteProduk/'.$row->kd_produk);?>" role="button">Hapus</a>
+                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Hapus</a>
                                                     </td>
                                                 </tr>
                                             </tbody>

@@ -50,13 +50,21 @@
             $input['kd_trans'] = $this->input->post('kd_trans');
             $input['nm_pelanggan'] = $this->input->post('nm_pelanggan');
             $input['keterangan'] = $this->input->post('keterangan');
+            $input['bayar'] = $this->input->post('bayar_dulu');
+            $input['tgl_trans'] = date("Y-m-d",strtotime($this->input->post('tanggal_penjualan')));
         
             $this->db->insert('tb_transaksi', $input);
 
             $update['fix'] = $this->input->post('fix');
             $input['kd_trans'] = $this->input->post('kd_trans');
             $this->model_app->updateData("tb_produkdibeli",$update,$key);
-            redirect('c_transaksi');
+
+            if($input['bayar']!=""){
+                redirect('c_detailTransaksi');
+            }else{
+                redirect('c_transaksi');
+            }
+            
         }
 
         function hapus_produkdibeli(){
