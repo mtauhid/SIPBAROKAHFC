@@ -51,12 +51,13 @@
                                         foreach ($kategori as $row) { ?>
                                         <tbody>
                                             <td><?php echo $no++ ?></td>
+											
                                             <td><?php echo $row['nama_kategori'] ?></td>
                                             <td width="1">
-                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahKategori/v_updateKategori'.$row['kd_kategori']);?>" role="button">Ubah</a>
+                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahKategori/v_updateKategori/'.$row['kd_kategori']);?>" role="button">Ubah</a>
                                                 </td>
                                             <td width="1">
-                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_deleteProduk/'.$row['kd_kategori']);?>" role="button">Hapus</a>
+                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahKategori/v_deleteKategori/'.$row['kd_kategori']);?>" role="button">Hapus</a>
                                             </td>
                                         </tbody>
                                             

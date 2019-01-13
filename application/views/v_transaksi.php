@@ -5,7 +5,7 @@
                                 <div class="d-flex align-items-center">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="<?php echo site_url('.')?>">Dashboard</a></li>
                                             <li class="breadcrumb-item active">Transaksi</li>
                                         </ol>
                                     </nav>
@@ -21,7 +21,7 @@
                                     <table width="100%">
                                             <tr>
                                                 <td>
-                                                    <a class="btn btn-success" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button"><i class="mdi mdi-cart-outline"></i> Mulai Pemesanan</a>
+                                                    <a class="btn btn-danger" href="<?php echo site_url('c_transaksi/tambah_transaksi')?>" role="button"><i class="mdi mdi-cart-outline"></i> Mulai Pemesanan</a>
                                                 </td>
                                                 <td width="100"></td>
                                                 <td width="1">
@@ -61,7 +61,7 @@
                                                     <th>Total Harga</th>
                                                     <th scope="col">Jumlah yang dibeli</th>
                                                     <th style="text-align: center;">Tanggal</th>
-                                                    <th width="1" style="text-align: center;">Bayar</th>
+                                                    <th width="1" style="text-align: center;">Detail Transaksi</th>
                                                 </tr>
                                             </thead>
                                             <?php
@@ -78,7 +78,7 @@
                                                 <td style="text-align: center;">@mdo</td>
                                                 <td style="text-align: center;"><?php echo $row->tgl_trans ?></td>
                                                 <td style="text-align: center;">
-                                                    <button type="button" class="btn waves-effect waves-light btn-outline-info">Detail</button>
+                                                    <a class="btn waves-effect waves-light btn-outline-success" href="<?php echo site_url('c_Transaksi/detail_transaksi/'.$row->kd_trans);?>" role="button">Detail Transaksi</a>
                                                 </td>
                                             </tr>
                                         </tbody>

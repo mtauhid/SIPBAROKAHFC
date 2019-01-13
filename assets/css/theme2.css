@@ -27399,7 +27399,7 @@ a.text-purple:hover {
 
 #main-wrapper[data-layout=vertical] .topbar .top-navbar .navbar-header[data-logobg=skin1],
 #main-wrapper[data-layout=horizontal] .topbar .top-navbar .navbar-header[data-logobg=skin1] {
-    background-color: #fa0807;
+    background-color: #fa4141;
 }
 
 
@@ -27407,21 +27407,21 @@ a.text-purple:hover {
 #main-wrapper[data-layout=vertical] .topbar[data-navbarbg=skin1],
 #main-wrapper[data-layout=horizontal] .topbar .navbar-collapse[data-navbarbg=skin1],
 #main-wrapper[data-layout=horizontal] .topbar[data-navbarbg=skin1] {
-    background-color: #fa0807;
+    background-color: #fa4141;
 }
 
 #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin1],
 #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin1] ul,
 #main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin1],
 #main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin1] ul {
-    background-color: #fa0807;
+    background-color: #fa4141;
 }
 
 #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin1] .create-btn,
 #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin1] ul .create-btn,
 #main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin1] .create-btn,
 #main-wrapper[data-layout=horizontal] .left-sidebar[data-sidebarbg=skin1] ul .create-btn {
-    background-color: #fa0807;
+    background-color: #fa4141;
 }
 
 #main-wrapper[data-layout=vertical] .left-sidebar[data-sidebarbg=skin2] ul::after,
@@ -28551,7 +28551,7 @@ ul.list-style-none li a:hover {
 .sidebar-nav ul .sidebar-item .sidebar-link.active,
 .sidebar-nav ul .sidebar-item .sidebar-link:hover{
     opacity: 1;
-    background-color: #fa0807;
+    background-color: #dcdcdc;
 }
 
 .sidebar-nav ul .sidebar-item .sidebar-link i {
@@ -29035,37 +29035,37 @@ html body .waves-notransition {
 .theme-color .theme-item .theme-link[data-logobg=skin1],
 .theme-color .theme-item .theme-link[data-navbarbg=skin1],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin1] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 .theme-color .theme-item .theme-link[data-logobg=skin2],
 .theme-color .theme-item .theme-link[data-navbarbg=skin2],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin2] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 .theme-color .theme-item .theme-link[data-logobg=skin3],
 .theme-color .theme-item .theme-link[data-navbarbg=skin3],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin3] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 .theme-color .theme-item .theme-link[data-logobg=skin4],
 .theme-color .theme-item .theme-link[data-navbarbg=skin4],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin4] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 .theme-color .theme-item .theme-link[data-logobg=skin5],
 .theme-color .theme-item .theme-link[data-navbarbg=skin5],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin5] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 .theme-color .theme-item .theme-link[data-logobg=skin6],
 .theme-color .theme-item .theme-link[data-navbarbg=skin6],
 .theme-color .theme-item .theme-link[data-sidebarbg=skin6] {
-    background-color: #fa0807;
+    background-color: #f4504f;
 }
 
 

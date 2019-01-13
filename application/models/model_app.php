@@ -146,12 +146,20 @@ class Model_app extends CI_Model{
         ")->result();
     }
 
+    function getAllDetailTransaksi($kd){
+        return $this->db->query("SELECT * FROM tb_transaksi a, tb_produk b, tb_produkdibeli c WHERE a.kd_trans=c.kd_trans AND b.kd_produk=c.kd_produk AND a.kd_trans='$kd'")->result();
+    }
+
     function getDataCart(){
-        return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
+        return $this->db->query("SELECT * , a.qty*b.harga as total_harga_peritem FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
+    }
+
+    function getTotalHarga1(){
+        return $this->db->query("SELECT * , a.qty*b.harga as total_harga_peritem FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
     }
 
     function getTotalHarga(){
-        return $this->db->query ("SELECT SUM(a.harga) FROM tb_produk a, tb_produkdibeli b WHERE a.kd_produk=b.kd_produk")->result();
+        return $this->db->query ("SELECT sum(b.harga) as total_harga FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
     }
 
     function getDataPenjualan($id){

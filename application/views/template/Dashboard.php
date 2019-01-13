@@ -27,7 +27,7 @@
                                         <div class="m-r-10">
                                             <h1 class="m-b-0"><i class="cc BTC text-white"></i></h1></div>
                                         <div>
-                                            <h6 class="font-12 text-white m-b-5 op-7">BTC / Bitcoin</h6>
+                                            <h6 class="font-12 text-white m-b-5 op-7">STATUSTIK PENJUALAN</h6>
                                             <h6 class="text-white font-medium m-b-0">$12,567.53</h6>
                                         </div>
                                         <div class="ml-auto">
@@ -59,8 +59,8 @@
                                         <div class="m-r-10">
                                             <h1 class="m-b-0"><i class="cc ETH text-white"></i></h1></div>
                                         <div>
-                                            <h6 class="font-12 text-white m-b-5 op-7">ETH / Ethereum</h6>
-                                            <h6 class="text-white font-medium m-b-0">$767.53</h6>
+                                            <h6 class="font-12 text-white m-b-5 op-7">STATISTIK PELANGGAN</h6>
+                                            <h6 class="text-white font-medium m-b-0">1035 Pelanggan</h6>
                                         </div>
                                         <div class="ml-auto">
                                             <div class="crypto"></div>
@@ -91,7 +91,7 @@
                                         <div class="m-r-10">
                                             <h1 class="m-b-0"><i class="cc XRP text-white"></i></h1></div>
                                         <div>
-                                            <h6 class="font-12 text-white m-b-5 op-7">XRP / Ripple</h6>
+                                            <h6 class="font-12 text-white m-b-5 op-7">PENGELUARAN</h6>
                                             <h6 class="text-white font-medium m-b-0">$2,567.53</h6>
                                         </div>
                                         <div class="ml-auto">

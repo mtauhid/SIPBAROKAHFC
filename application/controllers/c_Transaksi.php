@@ -28,7 +28,7 @@
             'kd_trans'=>$this->model_app->getKodeTransaksi(),
             'data_cart'=>$this->model_app->getDataCart(),
             'total_harga'=>$this->model_app->getTotalHarga(),
-            'data_produk'=>$this->model_app->getProduk()
+            'data_produk'=>$this->model_app->getProduk(),
         );
             $this->load->view('template/header');
             $this->load->view('template/sidebar');
@@ -36,12 +36,22 @@
             $this->load->view('template/footer');
         }
 
+        function detail_transaksi(){
+        $kd= $this->uri->segment(3);
+        $data=array(
+            'detail_transaksi'=>$this->model_app->getAllDetailTransaksi($kd),
+        );
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('v_detailTransaksi', $data);
+        $this->load->view('template/footer');
+    }
+
 
         public function tambah_ke_cart(){
             $input['kd_produk'] = $this->input->post('kd_produk');
             $input['kd_trans'] = $this->input->post('kd_trans');
             $input['qty'] = $this->input->post('qty');
-        
             $this->db->insert('tb_produkdibeli', $input);
             redirect('c_transaksi/tambah_transaksi');
         }

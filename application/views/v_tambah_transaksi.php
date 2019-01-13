@@ -5,7 +5,7 @@
                                 <div class="d-flex align-items-center">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="<?php echo site_url('.')?>">Dashboard</a>
                                             <li class="breadcrumb-item"><a href="#">Transaksi</a></li>
                                             <li class="breadcrumb-item" active>Tambah barang yang dibeli</a></li>
                                         </ol>
@@ -81,7 +81,7 @@
                                                     <td style="text-align: center;"><?php echo $row->kd_produk ?></td>
                                                     <td><?php echo $row->nm_produk ?></td>
                                                     <td style="text-align: center;"><?php echo $row->qty ?></td>
-                                                    <td style="text-align: center;"><?php echo $row->harga ?></td>
+                                                    <td style="text-align: center;"><?php echo $row->total_harga_peritem ?></td>
                                                     <td align="center">
                                                         <a class="btn btn-xs waves-effect waves-light btn-outline-danger" style="width: 100px;" href="<?php echo site_url('c_Transaksi/hapus_produkdibeli/'.$row->id_produkdibeli);?>" role="button">Hapus</a>
                                                     </td>
@@ -91,8 +91,11 @@
                                                 }
                                                 ?>
                                                 <tr>
+                                                    <?php
+                                                    foreach($data_cart as $tot);
+                                                    ?>
                                                     <td colspan="5" class="font-500" align="right">Total Bayar</td>
-                                                    <td class="font-500">Rp. </td>
+                                                    <td class="font-500">Rp. <?php echo $tot->total_harga_peritem?></td>
                                                 </tr>
                                             </tbody>
                                         </table>

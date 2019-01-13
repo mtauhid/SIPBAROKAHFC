@@ -31,8 +31,8 @@ class c_tambahKategori extends CI_Controller {
 
         public function save()
     {
-		$input['kd_kategori'] = $this->input->post('kode');
-        $input['nama_kategori'] = $this->input->post('kategori');
+		$input['kd_kategori'] = $this->input->post('kd_kategori');
+        $input['nama_kategori'] = $this->input->post('nama_kategori');
 		
         $updateKD = $this->input->post('updateKD');
         if (!empty($updateKD)) {
@@ -74,7 +74,7 @@ class c_tambahKategori extends CI_Controller {
 
     public function real_delete()
     {
-        $id = $this->input->post('kd_kategori');
+        $kd = $this->input->post('kd_kategori');
         $this->db->where('kd_kategori', $kd);
         $this->db->delete('tb_kategori');
         redirect('/c_Kategori/');

@@ -23,6 +23,17 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <table >
+                                            <tbody>
+                                                <tr>
+                                                    <td width="1">
+                                                        <a class="btn btn-danger" href="c_tambahProduk" role="button">Tambah Produk</a>
+                                                    </td>
+                                                    <td width="100%"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <br/>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <caption>List of Produk</caption>
