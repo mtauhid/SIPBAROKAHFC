@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Favicon icon -->
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/barokahchicken1.png')?>">
         <title>SI BAROKAH FRIED CHICKEN</title>
         <!-- Custom CSS -->
         <link href="<?php echo base_url('assets/libs/morris.js/morris.css')?>" rel="stylesheet">

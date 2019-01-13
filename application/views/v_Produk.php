@@ -23,39 +23,43 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Daftar Produk</h4>
-                                    <!--<h6 class="card-subtitle">Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</h6>-->
-                                </div>
-                                <table class="table" >
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <caption>List of Produk</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Kode Produk</th>
+                                                    <th scope="col">Nama Produk</th>
+                                                    <th scope="col">Kategori</th>
+                                                    <th scope="col">Harga</th>
+                                                    <th colspan="2" width="1" style="text-align: center;">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <?php
+                                            $no = 1;
+                                            if(isset($data_produk)){
+                                                foreach($data_produk as $row){
+                                            ?>
                                             <tbody>
                                                 <tr>
-                                                    
+                                                    <td><?php echo $row->kd_produk ?></td>
+                                                    <td><?php echo $row->nm_produk ?></td>
+                                                    <td><?php echo $row->kd_kategori ?></td>
+                                                    <td><?php echo $row->harga ?></td>
                                                     <td width="1">
-                                                        <a class="btn btn-primary" href="c_tambahProduk" role="button">Tambah Produk</a>
+                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Ubah</a>
                                                     </td>
-                                                    <td width="100%"></td>
+                                                    <td width="1">
+                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Hapus</a>
+                                                    </td>
                                                 </tr>
                                             </tbody>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
                                         </table>
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Nama Produk</th>
-                                                <th scope="col">Kategori</th>
-                                                <th scope="col">Harga</th>
-                                                <th scope="col">Keterangan</th>
-                                            </tr>
-                                        </thead>
-                                        <?php foreach ($produk as $r) {
-                                            echo '<tr>';
-                                            echo '<td>'.$r['kd_produk'].'</td><td>'.$r['nm_produk'].'</td><td>'.$r['kd_kategori'].'</td><td>'.$r['harga'].'</td><td>'.$r['keterangan'].'</td>';
-                                            echo '<td><a href="'.site_url('/c_tambahProduk/v_updateProduk/'.$r['kd_produk']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Ubah</a></td>';
-                                            echo '</tr>';
-                                        }
-                                        ?>
-                                    </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

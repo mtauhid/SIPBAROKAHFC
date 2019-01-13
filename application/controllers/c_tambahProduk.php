@@ -9,22 +9,14 @@ class c_tambahProduk extends CI_Controller {
             redirect('authentication/login');
             };
         $this->load->database();
+        $this->load->model('model_app');
     }
 
     	public function index(){
-            // apakah ada pencarian data spesifik dengan kata kunci tertentu
-         $search = $this->input->get('search');
-        if (!empty($search)) {
-
-            $this->db->like('kd_produk', $search, 'both'); 
-            $this->db->like('nm_produk', $search, 'both');
-            $this->db->or_like('kd_kategori', $search, 'both'); 
-            $this->db->or_like('harga', $search, 'both'); 
-            $this->db->or_like('keterangan', $search, 'both'); 
-        }
-            $tb_produk = $this->db->get('tb_produk');
-            $data['produk'] = $tb_produk->result_array();
-            $data['num_rows'] = $tb_produk->num_rows();
+            $data=array(
+                'data_produk'=>$this->model_app->getProduk(),
+                'kode_produk'=>$this->model_app->getKodeProduk()
+            );
         	$this->load->view('template/header');
             $this->load->view('template/sidebar');
         	$this->load->view('v_tambahProduk', $data);
@@ -38,24 +30,15 @@ class c_tambahProduk extends CI_Controller {
         $input['nm_produk'] = $this->input->post('nmproduk');
         $input['kd_kategori'] = $this->input->post('kategoriproduk');
         $input['harga'] = $this->input->post('harga');
-        $input['keterangan'] = $this->input->post('keterangan');
 		
         $updateKD = $this->input->post('updateKD');
         if (!empty($updateKD)) {
             $this->db->where('kd_produk', $updateKD);
             $this->db->update('tb_produk', $input);
         } else {
-            $this->db->insert('tb_produkdibeli', $input);
+            $this->db->insert('tb_produk', $input);
         }
         redirect('/c_Produk');
-    }
-
-    public function v_tambahProduk()
-    {
-        $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('v_tambahProduk');
-        $this->load->view('template/footer');
     }
     
     public function v_updateProduk($kd)
@@ -64,7 +47,7 @@ class c_tambahProduk extends CI_Controller {
         $data['update'] = $this->db->get('tb_produk')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('v_tambahProduk', $data);
+        $this->load->view('v_updateProduk', $data);
         $this->load->view('template/footer');
     }
     /*

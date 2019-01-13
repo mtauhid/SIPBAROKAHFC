@@ -29,8 +29,8 @@ class Model_app extends CI_Model{
     }
 
     //    KODE BARANG
-    function getKodeBarang(){
-        $q = $this->db->query("select MAX(RIGHT(kd_barang,3)) as kd_max from tbl_barang");
+    function getKodeProduk(){
+        $q = $this->db->query("select MAX(RIGHT(kd_produk,3)) as kd_max from tb_produk");
         $kd = "";
         if($q->num_rows()>0){
             foreach($q->result() as $k){
@@ -40,7 +40,7 @@ class Model_app extends CI_Model{
         }else{
             $kd = "001";
         }
-        return "B-".$kd;
+        return "P-".$kd;
     }
 
     //    KODE PELANGGAN
@@ -129,16 +129,29 @@ class Model_app extends CI_Model{
         return $this->db->query($q);
     }
 
+
     function getProduk(){
         return $this->db->query ("SELECT * from tb_produk")->result();
     }
 
     function getAllDataPenjualan(){
-        return $this->db->query("SELECT * FROM tb_transaksi a, tb_produkdibeli b WHERE a.kd_trans=b.kd_trans")->result();
+        return $this->db->query("SELECT
+            a.kd_trans,
+            a.tgl_trans,
+            a.total_bayar,
+            a.nm_pelanggan,
+            (select count(kd_trans) as jum from tb_produkdibeli where kd_trans=a.kd_trans) as jumlah
+        FROM tb_transaksi a
+        ORDER BY a.kd_trans DESC
+        ")->result();
     }
 
     function getDataCart(){
         return $this->db->query("SELECT * FROM tb_produkdibeli a, tb_produk b WHERE a.kd_produk=b.kd_produk AND a.fix='0'")->result();
+    }
+
+    function getTotalHarga(){
+        return $this->db->query ("SELECT SUM(a.harga) FROM tb_produk a, tb_produkdibeli b WHERE a.kd_produk=b.kd_produk")->result();
     }
 
     function getDataPenjualan($id){
