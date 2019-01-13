@@ -25,7 +25,8 @@
                             
                             
                             <li class="sidebar-item"> <a class="sidebar-link" href="<?php echo site_url('#');?>" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Users</span></a>
-                                </ul>
+								
+                                
                             </li>
                         </ul>
                     </nav>
