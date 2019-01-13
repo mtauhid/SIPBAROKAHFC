@@ -38,7 +38,7 @@ class c_tambahProduk extends CI_Controller {
         } else {
             $this->db->insert('tb_produk', $input);
         }
-        redirect('/c_Produk');
+        redirect('c_Produk');
     }
     
     public function v_updateProduk($kd)

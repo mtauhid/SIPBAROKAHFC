@@ -18,12 +18,12 @@
                                                 <input type="text" name="kd_produk" class="form-control" id="kd_produk" value= "<?php echo $update['kd_produk'] ?>" placeholder="Kode">
                                             </div>
 											<div class="form-group">
-                                                <label for="">Nama Kategori</label>
+                                                <label for="">Nama Produk</label>
                                                 <input type="text" name="nm_produk" class="form-control" id="nm_produk" value= "<?php echo $update['nm_produk'] ?>" placeholder="Kategori">
                                             </div>
                                             <div class="form-group">
                                                 <label>Kategori</label>
-                                                <select class="custom-select col-12" name="kategoriproduk" id="">
+                                                <select class="custom-select col-12" name="kategoriproduk" id="kategoriproduk">
                                                     <option selected disabled>Pilih Kategori Produk</option>
                                                     <option value="Makanan">Makanan</option>
                                                     <option value="Minuman">Minuman</option>
