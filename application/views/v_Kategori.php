@@ -43,16 +43,25 @@
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama Kategori</th>
-                                                <th width="1"></th>
+                                                <th width="1" colspan="2"></th>
                                             </tr>
                                         </thead>
-                                        <?php foreach ($kategori as $r) {
-                                            echo '<tr>';
-                                            echo '<td>'.$r['kd_kategori'].'</td><td>'.$r['nama_kategori'].'</td>';
-                                            echo '<td><a class="btn btn-primary" href="'.site_url('/c_tambahKategori/v_updateKategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Ubah</a></td>';
-											echo '<td><a class="btn btn-primary" href="'.site_url('/c_tambahKategori/v_deletekategori/'.$r['kd_kategori']).'" class="class="btn waves-effect waves-light btn-rounded btn-success"">Hapus</a></td>';
-                                            echo '</tr>';
-                                        }
+                                        <?php
+                                        $no = 1;
+                                        foreach ($kategori as $row) { ?>
+                                        <tbody>
+                                            <td><?php echo $no++ ?></td>
+                                            <td><?php echo $row['nama_kategori'] ?></td>
+                                            <td width="1">
+                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahKategori/v_updateKategori'.$row['kd_kategori']);?>" role="button">Ubah</a>
+                                                </td>
+                                            <td width="1">
+                                                <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_deleteProduk/'.$row['kd_kategori']);?>" role="button">Hapus</a>
+                                            </td>
+                                        </tbody>
+                                            
+                                        <?php
+                                            }
                                         ?>
                                     </table>
                                 </div>

@@ -29,8 +29,8 @@ class Model_app extends CI_Model{
     }
 
     //    KODE BARANG
-    function getKodeBarang(){
-        $q = $this->db->query("select MAX(RIGHT(kd_barang,3)) as kd_max from tbl_barang");
+    function getKodeProduk(){
+        $q = $this->db->query("select MAX(RIGHT(kd_produk,3)) as kd_max from tb_produk");
         $kd = "";
         if($q->num_rows()>0){
             foreach($q->result() as $k){
@@ -40,7 +40,7 @@ class Model_app extends CI_Model{
         }else{
             $kd = "001";
         }
-        return "B-".$kd;
+        return "P-".$kd;
     }
 
     //    KODE PELANGGAN

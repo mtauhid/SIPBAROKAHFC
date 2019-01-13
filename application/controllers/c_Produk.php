@@ -9,22 +9,14 @@ class c_Produk extends CI_Controller {
             redirect('authentication/login');
             };
         $this->load->database();
+        $this->load->model('model_app');
     }
 
     	public function index(){
-            // apakah ada pencarian data spesifik dengan kata kunci tertentu
-         $search = $this->input->get('search');
-        if (!empty($search)) {
-
-            $this->db->like('kd_produk', $search, 'both'); 
-            $this->db->like('nm_produk', $search, 'both');
-            $this->db->or_like('kd_kategori', $search, 'both'); 
-            $this->db->or_like('harga', $search, 'both'); 
-            $this->db->or_like('keterangan', $search, 'both'); 
-        }
-            $tb_produk = $this->db->get('tb_produk');
-            $data['produk'] = $tb_produk->result_array();
-            $data['num_rows'] = $tb_produk->num_rows();
+            $data=array(
+                'data_produk'=>$this->model_app->getProduk(),
+                'kode_produk'=>$this->model_app->getKodeProduk()
+            );
         	$this->load->view('template/header');
             $this->load->view('template/sidebar');
         	$this->load->view('v_Produk', $data);

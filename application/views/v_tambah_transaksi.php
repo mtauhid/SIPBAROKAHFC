@@ -33,7 +33,7 @@
                                                 <tr>
                                                     <td width="100%">
                                                         <input type="text" class="form-control" id="nametext1" name="kd_trans" value="<?php echo $kd_trans; ?>" style="width: 100px;" hidden >
-                                                        <select class="form-control" name="kd_produk" id="exampleFormControlSelect1">
+                                                        <select class="form-control" name="kd_produk" id="exampleFormControlSelect1" required>
                                                             <option selected disabled>PILIH ITEM PRODUK</option>
                                                             <?php
                                                             if(isset($data_produk)){
@@ -47,7 +47,7 @@
                                                         </select>
                                                     </td>
                                                     <td width="1">
-                                                        <input type="text" class="form-control" name="qty" value="" style="width: 80px;" placeholder="JUMLAH">
+                                                        <input type="text" class="form-control" name="qty" value="" style="width: 80px;" placeholder="JUMLAH" required>
                                                     </td>
                                                     <td width="1">
                                                         <button type="submit" class="btn waves-effect waves-light btn-info">Tambah Barang</button>
@@ -91,13 +91,8 @@
                                                 }
                                                 ?>
                                                 <tr>
-                                                    <?php
-                                                        foreach($total_harga as $total){
-                                                            $tot = $total;
-                                                    ?>
                                                     <td colspan="5" class="font-500" align="right">Total Bayar</td>
-                                                    <td class="font-500"><?php echo $total->tot?> ></td>
-                                                <?php } ?>
+                                                    <td class="font-500"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -107,7 +102,7 @@
                                                 <tr>
                                                     <td>
                                                         <label>Nama Pelanggan</label>
-                                                        <input type="text" class="form-control" id="nametext1" name="nm_pelanggan" style="width: 200px;">
+                                                        <input type="text" class="form-control" id="nametext1" name="nm_pelanggan" placeholder="Tambahkan pelanggan" style="width: 200px;">
                                                     </td>
                                                     <td colspan="2">
                                                         <label>Keterangan Pemesanan</label>
