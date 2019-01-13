@@ -15,11 +15,11 @@
                                         <form method="post" action="<?php echo site_url('/c_tambahProduk/save') ?>">
 											<div class="form-group">
                                                 <label for="">Kode</label>
-                                                <input type="text" name="kode" class="form-control" value="<?php echo $kode_produk ?>" placeholder="Kode Produk">
+                                                <input type="text" name="kd_produk" class="form-control" id="kd_produk" value= "<?php echo $update['kd_produk'] ?>" placeholder="Kode">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="">Nama Produk</label>
-                                                <input type="text" name="nmproduk" class="form-control" id="" placeholder="Nama Produk">
+											<div class="form-group">
+                                                <label for="">Nama Kategori</label>
+                                                <input type="text" name="nm_produk" class="form-control" id="nm_produk" value= "<?php echo $update['nm_produk'] ?>" placeholder="Kategori">
                                             </div>
                                             <div class="form-group">
                                                 <label>Kategori</label>
@@ -31,7 +31,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Harga</label>
-                                                <input type="text" class="form-control" name="harga" value="" placeholder="Harga">
+                                                <input type="text" class="form-control" name="harga" id = "harga" value="<?php echo $update['harga'] ?>" placeholder="Harga">
                                             </div>
                                             <div class="form-group">
                                                 <label>Keterangan Produk</label>

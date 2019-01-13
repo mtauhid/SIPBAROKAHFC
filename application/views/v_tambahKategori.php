@@ -20,11 +20,11 @@
                                         <form method="post" action="<?php echo site_url('/c_tambahKategori/save') ?>">
 											<div class="form-group">
                                                 <label for="">Kode</label>
-                                                <input type="text" name="kode" class="form-control" id="kode" placeholder="Kode" required>
+                                                <input type="text" name="kd_kategori" class="form-control" id="kd_kategori" value= "<?php echo $update['kd_kategori'] ?>" placeholder="Kode">
                                             </div>
 											<div class="form-group">
                                                 <label for="">Nama Kategori</label>
-                                                <input type="text" name="kategori" class="form-control" id="kategori" placeholder="Kategori" required>
+                                                <input type="text" name="nama_kategori" class="form-control" id="nama_kategori" value= "<?php echo $update['nama_kategori'] ?>" placeholder="Kategori">
                                             </div>
                                             
 											<?php if (isset($update_flag)) { 

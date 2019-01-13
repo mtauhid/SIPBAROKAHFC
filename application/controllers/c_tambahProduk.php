@@ -26,8 +26,8 @@ class c_tambahProduk extends CI_Controller {
 
         public function save()
     {
-		$input['kd_produk'] = $this->input->post('kode');
-        $input['nm_produk'] = $this->input->post('nmproduk');
+		$input['kd_produk'] = $this->input->post('kd_produk');
+        $input['nm_produk'] = $this->input->post('nm_produk');
         $input['kd_kategori'] = $this->input->post('kategoriproduk');
         $input['harga'] = $this->input->post('harga');
 		
@@ -47,7 +47,7 @@ class c_tambahProduk extends CI_Controller {
         $data['update'] = $this->db->get('tb_produk')->row_array();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('v_updateProduk', $data);
+        $this->load->view('v_tambahProduk', $data);
         $this->load->view('template/footer');
     }
     /*
