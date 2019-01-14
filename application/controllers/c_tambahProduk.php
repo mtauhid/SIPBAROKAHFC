@@ -14,7 +14,7 @@ class c_tambahProduk extends CI_Controller {
 
     	public function index(){
             $data=array(
-                'data_produk'=>$this->model_app->getProduk(),
+                'data_produk'=>$this->model_app->getUser(),
                 'kode_produk'=>$this->model_app->getKodeProduk()
             );
         	$this->load->view('template/header');
@@ -49,6 +49,12 @@ class c_tambahProduk extends CI_Controller {
         $this->load->view('template/sidebar');
         $this->load->view('v_tambahProduk', $data);
         $this->load->view('template/footer');
+    }
+
+    function v_deleteProduk(){
+        $id['kd_produk'] = $this->uri->segment(3);
+        $this->model_app->deleteData('tb_produk',$id);
+        redirect("c_produk");
     }
     /*
     public function v_deleteinputdosen($id)

@@ -134,6 +134,10 @@ class Model_app extends CI_Model{
         return $this->db->query ("SELECT * from tb_produk")->result();
     }
 
+    function getUser(){
+        return $this->db->query ("SELECT * from tb_user")->result();
+    }
+
     function getAllDataPenjualan(){
         return $this->db->query("SELECT
             a.kd_trans,

@@ -61,7 +61,7 @@
                                                         <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Ubah</a>
                                                     </td>
                                                     <td width="1">
-                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_updateProduk/'.$row->kd_produk);?>" role="button">Hapus</a>
+                                                        <a class="btn btn-primary" href="<?php echo site_url('c_tambahProduk/v_deleteProduk/'.$row->kd_produk);?>" role="button">Hapus</a>
                                                     </td>
                                                 </tr>
                                             </tbody>
